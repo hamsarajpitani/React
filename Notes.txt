@@ -1,0 +1,58 @@
+Switch 
+  render only single component 
+  jo phele wala route path match krgaya vo
+
+   <Switch>
+
+      <Route path='/' component={About} />
+        <Route path='/Contact'  component={Contact} />
+   
+      </Switch>
+
+PROBLEM
+      OUTPUT in browser 3000/contact 
+      / match 1st route so output about  
+SOLUCTION
+      OUTPUT in browser 3000/contact 
+      / match 1st route so output about  
+
+    
+   <Switch>
+
+      <Route exact path='/' component={About} />
+        <Route path='/Contact'  component={Contact} />
+   
+      </Switch>  
+
+ 2.
+    INALID ROUTE /dsds /dasdasd tgg/df exact
+    ///!! ONE WAY
+    ERROR.jsx
+     <Route component={Error}/>    
+   //!! TWO WAY
+      <Redirect to="/"/>    
+
+
+      <div className="container-fluid">
+        <div className="row">
+            <div className="col-10 mx-auto">
+ </div>
+    </div>
+
+3. to stop <a> to reload on click</a>
+     replace a with NavLink 
+     replace href= to to=
+   EXAMPLE :  
+
+      <a className="navbar-brand" href="/Contact">
+                  Doc.
+             </a>           
+use eaxct MUST else activeClassName always applied to Home with other pages time too
+       <NavLink exact className="navbar-brand" to="/About">
+                  Doc.
+                </NavLink>  
+
+  ATTRIBUTE IN NAVLINK 
+          activeClassName= css
+        <Route in APP.js Works here ></Route>        
+4.
